@@ -7,7 +7,7 @@ body {
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #f5f5f5;
+	background-color: #fff;
 	font-size:1em;
 }
 
@@ -52,6 +52,7 @@ p {
 /*The widths are in a percentage!*/
 header {
 	border-bottom: 3px solid #77a466;
+	text-align: center;
 	margin: 0 auto;
 	display:flex;
 	justify-content: center;
@@ -72,8 +73,6 @@ header h1 span {
 }
 
 header nav {
-	display: flex;
-	justify-content: center;
 	padding: 20px 0; /*originally 46px 0*/
 	width: 100%;
 }
@@ -188,4 +187,56 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+
+@media only screen and (max-width: 768px){
+    /* Tablet styles here */
+		.bottom-section{
+			justify-content: space-between;
+			align-items: center;
+			flex-flow:column nowrap;
+			border-top: 1px solid #eee;
+		}
+
+		.section-one,
+		.section-two,
+		.section-three{
+			border-top: none;
+			flex-basis: 30%;
+		}
+
+		.section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+    /* Desktop styles here */
+
+		header {
+				justify-content: space-between;
+		}
+
+		header h1 {
+				width: 30%;
+				padding: 0;
+				border-bottom: none;
+				text-align: left;
+		}
+
+		header nav {
+				width: 40%;
+		}
+
+		header nav ul {
+				display: flex;
+				justify-content: space-between;
+				align-content: space-between;
+		}
+
 }
